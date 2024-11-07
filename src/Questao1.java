@@ -22,15 +22,15 @@ public class Questao1 {
             return -1;
         }
 
-        String[] producoes = regras.get(simbolo.charAt(0));
-        if (producoes == null) {
+        String[] possibilidades = regras.get(simbolo.charAt(0));
+        if (possibilidades == null) {
             return -1;
         }
 
-        for (String producao : producoes) {
+        for (String possibilidade : possibilidades) {
             int novaPosicao = posicao;
 
-            for (char c : producao.toCharArray()) {
+            for (char c : possibilidade.toCharArray()) {
                 if (Character.isUpperCase(c)) {
                     novaPosicao = verificaCadeia(String.valueOf(c), cadeia, novaPosicao);
                     if (novaPosicao == -1) {
